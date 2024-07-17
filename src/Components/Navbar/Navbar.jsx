@@ -16,7 +16,7 @@ const Navbar = props => {
       ];      
 
     return (
-        <nav className='bg-yellow-200 text-black p-6'>
+        <nav className='bg-yellow-200 text-black p-6 container mx-auto rounded-b-2xl'>
             <div className="md:hidden" onClick={()=>setOpen(!open)}>
                 {
                     open===true? 
