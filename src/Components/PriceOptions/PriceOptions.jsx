@@ -48,7 +48,7 @@ const PriceOptions = (props) => {
 
   return (
     <div className="container mx-auto my-8">
-      <h2 className="text-5xl font-bold text-center">Best Prices in Town</h2>
+      <h2 className="text-5xl font-bold text-center my-4">Best Prices in Town</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {priceOptions.map((option) => (
           <PriceOption key={option.id} option={option}></PriceOption>
