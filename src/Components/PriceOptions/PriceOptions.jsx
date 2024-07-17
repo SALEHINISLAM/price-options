@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import PriceOption from "../PriceOption/PriceOption";
 
 const PriceOptions = (props) => {
-  const priceOptions=[
+  const priceOptions = [
     {
       id: 1,
       name: "Basic Membership",
@@ -46,12 +46,16 @@ const PriceOptions = (props) => {
     },
   ];
 
-  return (<div className="container mx-auto my-8">
-    <h2 className="text-5xl font-bold text-center">Best Prices in Town</h2>
-    {
-        priceOptions.map(option=><PriceOption key={option.id} option={option}></PriceOption>)
-    }
-  </div>);
+  return (
+    <div className="container mx-auto my-8">
+      <h2 className="text-5xl font-bold text-center">Best Prices in Town</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {priceOptions.map((option) => (
+          <PriceOption key={option.id} option={option}></PriceOption>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 PriceOptions.propTypes = {};
